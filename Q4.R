@@ -27,10 +27,10 @@ ydata<-pdata%>%
                 group_by(week, interval) %>%
                         summarize(tasteps=sum(steps))
 
-library(ggplot2)
-ggplot(ydata, aes(x = interval , y = tasteps)) +
-        geom_line() +
-        labs(title = "Average daily steps by type of date", x = "Interval", y = "Average number of steps") +
-        facet_wrap(~week, ncol = 1, nrow=2)
+edata <- subset(ydata, week == "Weekend")
+ddata <- subset(ydata, week == "Weekday")
 
+par(mfrow=c(1,2))
+with(edata, plot(interval, tasteps, type = "l"))
+with(ddata, plot(interval, tasteps, type = "l"))
 
