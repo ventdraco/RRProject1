@@ -27,3 +27,5 @@ meantsbd <- mean(tsbd$steps)
 mediantsbd <- median(tsbd$steps)
 
 
+dev.copy(png,file = 'hist1.png',width = 480, height = 480)
+dev.off()

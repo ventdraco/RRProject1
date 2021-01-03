@@ -34,3 +34,5 @@ par(mfrow=c(1,2))
 with(edata, plot(interval, tasteps, type = "l"))
 with(ddata, plot(interval, tasteps, type = "l"))
 
+dev.copy(png,file = 'plot2.png',width = 480, height = 480)
+dev.off()

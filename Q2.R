@@ -21,3 +21,5 @@ with(asbd, plot(interval, steps, type = "l"))
 
 asbd[which.max(asbd$steps), ]$interval
 
+dev.copy(png,file = 'plot1.png',width = 480, height = 480)
+dev.off()

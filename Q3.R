@@ -30,3 +30,6 @@ hist(atsbd$steps, xlab="Steps per day", ylab="Number of Days", main="Steps taken
 meanatsbd <- mean(atsbd$steps)
         
 medianatsbd <- median(atsbd$steps)
+
+dev.copy(png,file = 'hist2.png',width = 480, height = 480)
+dev.off()
