@@ -17,7 +17,7 @@ xdata <- read.csv("activity.csv", sep = "," ,header = TRUE)
 
 asbd<-aggregate(steps~interval, xdata, mean, na.rm = FALSE)
 
-with(asbd, plot(interval, steps, type = "l"))
+with(asbd, plot(interval, steps, col = "red", type = "l"))
 
 asbd[which.max(asbd$steps), ]$interval
 
