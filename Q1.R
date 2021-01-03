@@ -19,7 +19,7 @@ xdata <- read.csv("activity.csv", sep = "," ,header = TRUE)
 tsbd<-aggregate(steps~date, xdata, sum)
 
 ##Histogram
-hist(atsbd$steps, xlab="Steps per day", ylab="Number of Days", main="Steps taken each day")
+hist(tsbd$steps, xlab="Steps per day", ylab="Number of Days", main="Steps taken each day")
 ##Mean
 meantsbd <- mean(tsbd$steps)
 
